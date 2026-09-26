@@ -6,85 +6,442 @@
 }
 
 body {
-    background-color: #1e1e1e;
+    min-height: 100vh;
+    background: #151515;
     color: #ffffff;
 }
 
+
+/* =========================
+   CABEÇALHO
+========================= */
+
 header {
-    background-color: #2b2b2b;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #444;
+    background: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+.cabecalho {
+    max-width: 1250px;
+    margin: auto;
+    padding: 25px 30px;
+}
+
+.caixa-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtitulo {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 2px;
 }
 
 .caixa-cabecalho h1 {
+    margin-top: 5px;
+    font-size: 26px;
+}
+
+.icone-header {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4caf50;
     font-size: 22px;
 }
 
+
+/* =========================
+   CENTRAL
+========================= */
+
 .central {
-    display: flex;
-    gap: 30px;
-    padding: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 330px 1fr;
+
+    gap: 25px;
+
+    padding: 35px 30px;
 }
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
 
 .caixa-central {
-    background-color: #2b2b2b;
-    padding: 20px;
-    width: 320px;
-    border-radius: 8px;
+    background: #1f1f1f;
+
+    border: 1px solid #333;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    height: fit-content;
 }
 
-.caixa-titulo h1 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-align: center;
+
+.caixa-titulo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #333;
 }
+
+.icone-titulo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2d8a3a;
+
+    border-radius: 10px;
+
+    font-size: 19px;
+}
+
+.caixa-titulo span,
+.topo-tabela span {
+    color: #888;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+.caixa-titulo h2 {
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
 
 .caixa-informacoes label {
-    font-size: 14px;
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+.caixa-informacoes label i {
+    color: #4caf50;
+    margin-left: 3px;
 }
 
 .caixa-informacoes select,
 .caixa-informacoes input {
     width: 100%;
-    padding: 8px;
-    margin: 6px 0 15px 0;
-    border: none;
-    border-radius: 4px;
+
+    height: 43px;
+
+    padding: 0 12px;
+
+    margin-bottom: 20px;
+
+    background: #151515;
+
+    border: 1px solid #3b3b3b;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    outline: none;
+
+    transition: 0.2s;
 }
 
-.btn-registrar {
-    text-align: center;
+.caixa-informacoes select:focus,
+.caixa-informacoes input:focus {
+    border-color: #4caf50;
+
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.12);
 }
 
-#btn-registrar {
-    padding: 10px 20px;
+
+/* =========================
+   BOTÃO
+========================= */
+
+.btn-registrar button {
+    width: 100%;
+
+    height: 45px;
+
     border: none;
-    border-radius: 4px;
-    background-color: #4caf50;
-    color: #fff;
+
+    border-radius: 8px;
+
+    background: #4caf50;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
-#btn-registrar:hover {
-    background-color: #43a047;
+.btn-registrar button i {
+    margin-right: 6px;
+}
+
+.btn-registrar button:hover {
+    background: #43a047;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   ÁREA DOS RELATÓRIOS
+========================= */
+
+.area-relatorios {
+    min-width: 0;
+}
+
+.topo-tabela {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.topo-tabela h2 {
+    font-size: 20px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.total {
+    background: #1f1f1f;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    padding: 10px 15px;
+
+    text-align: right;
+}
+
+.total span {
+    display: block;
+
+    font-size: 10px;
+}
+
+.total strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #4caf50;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   TABELA
+========================= */
+
+.tabela {
+    background: #1f1f1f;
+
+    border: 1px solid #333;
+
+    border-radius: 14px;
+
+    overflow: hidden;
 }
 
 .tabela table {
+    width: 100%;
+
     border-collapse: collapse;
-    min-width: 400px;
-    background-color: #2b2b2b;
+}
+
+.tabela th {
+    background: #292929;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
 }
 
 .tabela th,
 .tabela td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #444;
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #333;
 }
 
-.tabela th {
-    background-color: #3a3a3a;
+.tabela td {
+    color: #ddd;
+
+    font-size: 13px;
+}
+
+.tabela tbody tr {
+    transition: 0.2s;
+}
+
+.tabela tbody tr:hover {
+    background: #252525;
+}
+
+
+/* =========================
+   BOTÃO EXCLUIR
+========================= */
+
+.btn-excluir {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #3a2020;
+
+    color: #ff6b6b;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-excluir:hover {
+    background: #ff4d4d;
+
+    color: white;
+}
+
+
+/* =========================
+   SEM REGISTROS
+========================= */
+
+.sem-registros {
+    padding: 55px 20px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+.sem-registros i {
+    font-size: 35px;
+}
+
+.sem-registros p {
+    margin-top: 10px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .central {
+        grid-template-columns: 1fr;
+
+        padding: 25px 15px;
+    }
+
+    .caixa-central {
+        width: 100%;
+    }
+
+    .topo-tabela {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .tabela {
+        overflow-x: auto;
+    }
+
+    .tabela table {
+        min-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cabecalho {
+        padding: 20px 15px;
+    }
+
+    .caixa-cabecalho h1 {
+        font-size: 20px;
+    }
+
+    .icone-header {
+        width: 42px;
+        height: 42px;
+    }
+
+    .topo-tabela {
+        flex-direction: column;
+    }
+
+    .total {
+        width: 100%;
+
+        text-align: left;
+    }
+
 }
